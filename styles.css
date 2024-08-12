@@ -1,0 +1,252 @@
+:root {
+  --primary-color: #FD5F00;
+  --secondary-color: #FFFFFF;
+  --background-color: #000000;
+  --facebook-color: #3b5998;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/background.webp");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+.nav_button {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  right: 0;
+  transform: translateX(-50%);
+  transition: top 0.2s ease-in-out, bottom 0.5s ease-in-out, transform 0.2s ease-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.nav_up_button {
+  top: -50px;
+}
+
+.nav_down_button {
+  bottom: -50px;
+}
+
+.nav_button:active {
+  transform: translateX(-50%) translateY(2px) scale(0.85);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-height: 100vh;
+  color: var(--secondary-color);
+}
+
+h1 {
+  color: var(--secondary-color);
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid yellow;
+  font-family: "Inconsolata", sans-serif;
+  width: 100%;
+}
+
+.nameAndSurname__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 90%;
+  width: 100%;
+}
+
+.nameAndSurname__container > h2 {
+  font-size: 5rem;
+  font-family: "Inconsolata", sans-serif;
+  font-weight: lighter;
+}
+
+.bracket {
+  color: yellow;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  gap: 5%;
+}
+
+.features {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px;
+  width: 40%;
+  text-align: center;
+  margin-top: 1.1rem;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+.features:hover {
+  transition: 0.5s;
+  transform: scale(1.4);
+  color: yellow;
+}
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+
+.skills__container > h1 {
+  margin: 0 100px;
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+.skills__Image {
+  height: 200px;
+  width: 200px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--secondary-color);
+}
+
+.contact__List {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  list-style: none;
+  text-align: center;
+  border: 1px solid yellow;
+  border-radius: 2%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact__List li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.contact__List > h1 {
+  background-color: transparent;
+  height: 500px;
+  width: 500px;
+  border-color: var(--secondary-color);
+}
+
+.contact__List a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+  transition: 0.2s;
+}
+
+.contact__List li:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.fa-facebook, .fa-mobile {
+  font-size: 6rem;
+}
+
+.fa-facebook {
+  color: var(--facebook-color);
+}
+
+@media (max-width: 600px) {
+  .contact__List {
+    flex-direction: column;
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .main__Quote {
+    font-size: 1rem;
+  }
+  .nameAndSurname__container h2 {
+    font-size: 6rem;
+  }
+  h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .features {
+    font-size: 0.9rem;
+  }
+  .skills__container {
+    margin: 10px;
+    padding: 10px;
+    gap: 0;
+    background-color: var(--secondary-color);
+  }
+  .skills__container > h1 {
+    color: black;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    width: 60%;
+    font-size: 2rem;
+  }
+  .nameAndSurname__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
+  .nameAndSurname__container h2 {
+    font-size: 10rem;
+  }
+  .featuresContainer {
+    justify-content: center;
+    gap: 0;
+    align-items: center;
+    gap: 5px;
+  }
+  .featuresContainer > h1 {
+    margin: 0 100px;
+  }
+  .features {
+    font-size: 1.3rem;
+    margin: 0;
+    width: 30%;
+  }
+}/*# sourceMappingURL=styles.css.map */
